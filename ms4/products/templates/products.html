@@ -1,4 +1,8 @@
+{% extends 'base.html' %}
+
 {% load humanize %}
+
+{% block content %}
 
 <h1>Products</h1>
 
@@ -16,3 +20,5 @@
 {% else %}
     <h1>No products available</h1>
 {% endif %}
+
+{% endblock %}
