@@ -27,7 +27,7 @@ def register(request):
                     return redirect('register')
                 else:
                     user = User.objects.create_user(username=username, password=password,email=email, first_name=first_name, last_name=last_name)
-                    
+
                     # Login after register
                     auth.login(request, user)
                     messages.success(request, 'Welcome!')
@@ -57,4 +57,10 @@ def login(request):
             return redirect('login')
     else:
         return render(request, 'accounts/login.html')
+
+def logout(request):
+    if request.method == "POST":
+        auth.logout(request)
+        messages.success(request, "You are now logged out!")
+    return redirect('index')
 
