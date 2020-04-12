@@ -1,9 +1,23 @@
 <h1>Products</h1>
 
-{% for product in products %}
+{% if products %}
+    {% for product in products %}
 
-{{ product.name }}
-<img src="{{ product.photo_main.url }}" alt="Egg" style="width: 100px;">
+    {{ product.name }}
+    <br>
+    {{ product.description }}
+    <br>
+    <img src="{{ product.photo_main.url }}" alt="Egg" style="width: 100px;">
+    <br>
+    {{ product.price }}
 
+    <a href="{% url 'product' product.id %}">More Info</a>
 
-{% endfor %}
+    <br>
+    <br>
+
+    {% endfor %}
+
+{% else %}
+    <h1>No products available</h1>
+{% endif %}

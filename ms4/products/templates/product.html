@@ -1,0 +1,13 @@
+{% load humanize %}
+
+<h1>Product</h1>
+
+{{ product.name }}
+<br>
+{{ product.description }}
+<br>
+<img src="{{ product.photo_main.url }}" alt="Egg" style="width: 100px;">
+
+<p>€{{ product.price | intcomma }}</p>
+
+
