@@ -20,7 +20,7 @@
             </li>
 
             {% if user.is_authenticated %}
-            <li class="nav-item"><span class="nav-link">Welcome, {{ user.username }}!</span></li>
+            <span class="navbar-text">Welcome, {{ user.first_name }}!</span>
             <li class="nav-item mr-3">
               <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
                 <i class="fas fa-sign-out-alt"></i> Logout
