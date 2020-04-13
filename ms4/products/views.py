@@ -4,8 +4,8 @@ from .models import Product
 
 def index(request):
     products = Product.objects.all()
-    return render(request, "products.html", {"products": products})
+    return render(request, "products/products.html", {"products": products})
 
 def product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    return render(request, "product.html", {"product": product})
+    return render(request, "products/product.html", {"product": product})
