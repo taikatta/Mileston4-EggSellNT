@@ -2,28 +2,22 @@
 {% block content %}
 
 <h1>About</h1>
-{% if user %}
-<h1>hi</h1>
-{{ user.first_name }}
-{% else %}
-<h1>No user</h1>
-{% endif %}
-
-{% if team %}
-{{ team.name }}
-{% else %}
-<h1>No team</h1>
-{% endif %}
-
 
 <section id="team">
     <div class="container">
-        {% for person in team %}
-        <p>{{ person.name }}</p>
-        <p>{{ person.title }}</p>
-        <p>{{ person.description }}</p>
-        <img src="{{ person.photo.url }}" alt="Team member" style="width: 100px;">
-        {% endfor %}
+        <div class="row">
+            {% for person in team %}
+
+            <div class="card col-sm" style="width: 18rem;">
+                <img class="card-img-top" src="{{ person.photo.url }}" alt="Team member">
+                <div class="card-body">
+                    <h3 class="card-title">{{ person.name }}</h3>
+                    <h5 class="card-title">{{ person.title }}</h5>
+                    <p class="card-text">{{ person.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 
