@@ -4,24 +4,28 @@
 
 {% block content %}
 
-<h1>Product</h1>
+<div class="container">
+    <div class="row">
 
-<p>{{ product.name }}</p>
-<p>{{ product.description }}</p>
-<img src="{{ product.photo_main.url }}" alt="Egg" style="width: 100px;">
-
-<p>€{{ product.price | intcomma }}</p>
-
-<form method="post" action="{% url 'add_to_cart' product.id %}">
-    {% csrf_token %}
-    <div class="input-group">
-        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-        <span class="input-group-btn">
-            <button class="btn btn-success" type="submit">Add</button>
-        </span>
+        <div class="col-4">
+            <div class="card">
+                <img class="card-img-top" src="{{ product.photo_main.url }}" alt="Egg">
+                <div class="card-body">
+                    <h3 class="card-title">{{ product.name }}</h3>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p>€{{ product.price | intcomma }}</p>
+                    <form method="post" action="{% url 'add_to_cart' product.id %}">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="submit">Add</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
-
+</div>
 {% endblock %}
-
-
