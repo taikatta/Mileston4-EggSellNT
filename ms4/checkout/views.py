@@ -10,9 +10,8 @@ import stripe
 
 stripe.api_key = settings.STRIPE_SECRET
 
-# @login_required()
+@login_required(login_url='login')
 def checkout(request):
-    if request.user.is_authenticated:
         if request.method=="POST":
             order_form = OrderForm(request.POST)
             payment_form = MakePaymentForm(request.POST)
@@ -58,6 +57,3 @@ def checkout(request):
             order_form = OrderForm()
         
         return render(request, "checkout/checkout.html", {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
-    else:
-        messages.error(request, "You have to login first!")
-        return redirect('login')
