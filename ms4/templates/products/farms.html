@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Farms</h1>
+
+<section id="team">
+    <div class="container">
+        <div class="row">
+            {% for farm in farms %}
+            <div class="card col-sm" style="width: 18rem;">
+                <img class="card-img-top" src="{{ farm.photo.url }}" alt="Farms">
+                <div class="card-body">
+                    <h3 class="card-title">{{ farm.name }}</h3>
+                    <p class="card-text">{{ farm.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
