@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from team.models import Team
+from company.models import Employee
 
 # Create your views here.
 def index(request):
@@ -13,7 +13,5 @@ def about(request):
     """
     Displaying the about page.
     """
-    team = Team.objects.all()
-    return render(request, "pages/about.html", {"team": team})
-
-
+    company = Employee.objects.all()
+    return render(request, "pages/about.html", {"company": company})
