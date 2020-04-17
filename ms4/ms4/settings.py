@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'products',
     'accounts',
     'cart',
+    'company',
     'team',
     'checkout',
     'django.contrib.humanize',
