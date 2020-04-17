@@ -1,4 +1,5 @@
 from django.db import models
+from farm.models import Farm
 
 # Create your models here.
 class Product(models.Model):
@@ -6,7 +7,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     photo_main = models.ImageField(upload_to='photos/eggs')
-    photo_1 = models.ImageField(upload_to='photos/eggs', blank=True)
+    farm = models.ForeignKey(Farm, on_delete=models.DO_NOTHING, default='')
 
     def __str__(self):
         return self.name
