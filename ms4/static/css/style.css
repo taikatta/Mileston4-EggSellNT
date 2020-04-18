@@ -1,0 +1,9 @@
+#home {
+    background: url(../../media/photos/canva_brown_egg.jpg) center no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
+}
