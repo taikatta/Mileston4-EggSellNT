@@ -28,8 +28,8 @@ def search(request):
         if keywords:
             queryset_list = queryset_list.filter(Q(description__icontains=keywords) | Q(name__icontains=keywords))
 
-    return render(request, 'products/search.html',
-        {'products': queryset_list,
-        'values': request.GET
+    context = {'products': queryset_list,
+        'searchterm': request.GET['keywords']
         }
-    )
+
+    return render(request, 'products/search.html', context)
