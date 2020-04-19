@@ -9,15 +9,22 @@ body, html {
 }
 
 body {
-    padding-top: 50px;
+    padding-top: 55px;
 }
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
 
 .landing {
     border: none;
 }
+
+.footer {
+    background-color: #EBEEF0;
+}
+/* 
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #EBEEF0;
+  }
+  */
