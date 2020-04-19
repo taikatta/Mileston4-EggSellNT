@@ -22,8 +22,25 @@
 {% endfor %}
 {% endif %}
 
+<!-- Search -->
+<section id="search">
+    <div class="container">
+        <form action="{% url 'search' %}">
+            <div class="form-row">
+                <h3>Search eggs</h3>
+                <div class="col-auto my-1">
+                    <input type="text" name="keywords" class="form-control" placeholder="Search...">
+                </div>
+                <div class="col-auto my-1">
+                    <button class="btn btn-secondary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<br>
+
 <section id="products">
-    <h1>All our Products</h1>
     <div class="container">
         <div class="row">
             {% if products %}
