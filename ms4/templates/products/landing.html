@@ -2,31 +2,34 @@
 
 {% block content %}
 
-<br>
-<div class="container">
-    <div class="row">
-        <div class="card col-sm landing">
-            <a href="{% url 'products' %}">
-                <img class="card-img-top" src="../../media/photos/shop/canva_eggs_close_up.jpg" alt="Card image cap">
-            </a>
-            <div class="card-body">
+<section id="landing">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="card col-sm landing">
                 <a href="{% url 'products' %}">
-                    <h5 class="card-title text-center">View all products</h5>
+                    <img class="card-img-top" src="../../media/photos/shop/canva_eggs_close_up.jpg"
+                        alt="Card image cap">
                 </a>
+                <div class="card-body">
+                    <a href="{% url 'products' %}">
+                        <h5 class="card-title text-center">View all products</h5>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="card col-sm landing">
-            <a href="{% url 'farms' %}">
-                <img class="card-img-top" src="../../media/photos/shop/canva_chicks_and_roosters.jpg"
-                    alt="Card image cap">
-            </a>
-            <div class="card-body">
+            <div class="card col-sm landing">
                 <a href="{% url 'farms' %}">
-                    <h5 class="card-title text-center">View products by Farm</h5>
+                    <img class="card-img-top" src="../../media/photos/shop/canva_chicks_and_roosters.jpg"
+                        alt="Card image cap">
                 </a>
+                <div class="card-body">
+                    <a href="{% url 'farms' %}">
+                        <h5 class="card-title text-center">View products by Farm</h5>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 {% endblock %}
