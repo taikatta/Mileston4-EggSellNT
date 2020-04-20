@@ -4,12 +4,23 @@
     background-size: cover;
 }
 
+.card {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
 body, html {
     height: 100%;
 }
 
+#products,
+#product {
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
 body {
     padding-top: 55px;
+    padding-bottom: 50px;
 }
 
 .landing {
@@ -17,14 +28,9 @@ body {
 }
 
 .footer {
-    background-color: #EBEEF0;
-}
-/* 
-
-.footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #EBEEF0;
+    height: 60px;
+    line-height: 30px;
   }
-  */
