@@ -3,6 +3,9 @@
 {% load humanize %}
 
 {% block content %}
+{% if searchterm %}
+<h3>Search result for {{ searchterm }}<h3></h3>
+{% endif %}
 
 {% if messages %}
 {% for message in messages %}
