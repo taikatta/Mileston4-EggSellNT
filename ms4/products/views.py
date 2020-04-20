@@ -4,9 +4,6 @@ from farm.models import Farm
 from django.db.models import Q
 
 
-def index(request):
-    return render(request, "products/landing.html")
-
 def farms(request):
     farms = Farm.objects.all()
     return render(request, "products/farms.html", {"farms": farms})
