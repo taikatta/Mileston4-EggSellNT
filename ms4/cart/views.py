@@ -13,9 +13,9 @@ def add_to_cart(request, id):
     """Add a quantity of the specified product to the cart"""
     try:
         quantity = int(request.POST.get('quantity'))
-    except ValueError:
-        quantity = 0
-        messages.error(request, 'Please add a quantity!')
+    except: # ValueError:
+        quantity = 1
+        #messages.error(request, 'Please add a quantity!')
 
     cart = request.session.get('cart', {})
     if id in cart:
