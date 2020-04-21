@@ -2,17 +2,18 @@
 
 {% block content %}
 
-<h1>View products by Farm</h1>
-
 <section id="farms">
     <div class="container">
+        <h1>Our farms:</h1>
         <div class="row">
             {% for farm in farms %}
-            <div class="card col-sm" style="width: 18rem;">
-                <img class="card-img-top" src="{{ farm.photo.url }}" alt="Farms">
-                <div class="card-body">
-                    <h3 class="card-title"><a href="{% url 'products_by_farm' farm.id %}">{{ farm.name }}</a></h3>
-                    <p class="card-text">{{ farm.description }}</p>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{ farm.photo.url }}" alt="Farms">
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="{% url 'products_by_farm' farm.id %}">{{ farm.name }}</a></h3>
+                        <p class="card-text">{{ farm.description }}</p>
+                    </div>
                 </div>
             </div>
             {% endfor %}

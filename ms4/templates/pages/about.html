@@ -1,21 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>About Us</h1>
-
-<h3>Our team</h3>
 
 <section id="team">
     <div class="container">
         <div class="row">
             {% for person in company %}
-
-            <div class="card col-sm" style="width: 18rem;">
-                <img class="card-img-top" src="{{ person.photo.url }}" alt="Team member">
-                <div class="card-body">
-                    <h3 class="card-title">{{ person.name }}</h3>
-                    <h5 class="card-title">{{ person.title }}</h5>
-                    <p class="card-text">{{ person.description }}</p>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{ person.photo.url }}" alt="Team member">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ person.name }}</h3>
+                        <h5 class="card-title">{{ person.title }}</h5>
+                        <p class="card-text">{{ person.description }}</p>
+                    </div>
                 </div>
             </div>
             {% endfor %}
