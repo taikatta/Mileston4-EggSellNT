@@ -4,9 +4,11 @@
     background-size: cover;
 }
 
-.card {
-    margin-top: 10px;
-    margin-bottom: 30px;
+#team,
+#farms {
+    background: url(../../media/photos/canva_eggs_in_a_row.jpg) center no-repeat;
+    height: 100%;
+    background-size: cover;
 }
 
 body, html {
