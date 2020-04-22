@@ -16,8 +16,18 @@
     margin-bottom: 30px;
 }
 
-.card-body {
+P {
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+.card-body,
+.email {
     background-color: #F2F4F5;
+}
+
+.email {
+    margin-top: 1rem;
 }
 
 body, html {
