@@ -4,15 +4,22 @@
 
 <section id="farms">
     <div class="container">
-        <h1>Our farms:</h1>
+        <div class="email text-center">
+            <p>Our email address: info@eggsellnt.com</p>
+            <p>Our email address: info@eggsellnt.com</p>
+
+        </div>
         <div class="row">
             {% for farm in farms %}
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card mb-4">
                     <img class="card-img-top" src="{{ farm.photo.url }}" alt="Farms">
                     <div class="card-body">
-                        <h3 class="card-title"><a href="{% url 'products_by_farm' farm.id %}">{{ farm.name }}</a></h3>
-                        <p class="card-text">{{ farm.description }}</p>
+                        <h3 class="card-title">{{ farm.name }}</h3>
+                        <h6 class="card-text">{{ farm.description }}<h6>
+                        <div class="text-center">
+                            <a href="{% url 'products_by_farm' farm.id %}" class="btn btn-secondary stretched-link">Eggs from {{ farm.name }}</a>
+                        </div>
                     </div>
                 </div>
             </div>
