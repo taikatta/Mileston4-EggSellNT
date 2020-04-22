@@ -39,10 +39,10 @@
                         <h3 class="card-title">{{ product.name }}</h3>
                         <div class="row">
                             <div class="col-6">
-                                <p>€{{ product.price | intcomma }}</p>
+                                <h6>€{{ product.price | intcomma }}</h6>
                             </div>
                             <div class="col-6">
-                                <a href="{% url 'product' product.id %}">More Info</a>
+                                <a href="{% url 'product' product.id %}"><h6>More Info</h6></a>
                             </div>
                         </div>
                         <form method="post" action="{% url 'add_to_cart' product.id %}">
