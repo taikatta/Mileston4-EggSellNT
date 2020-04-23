@@ -1,1 +1,1 @@
-web: gunicorn egg-sell-nt.wsgi:application
+web: gunicorn ms4.ms4.wsgi:application
