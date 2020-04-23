@@ -5,3 +5,6 @@ __pycache__/
 .python-version
 .vscode
 env.py
+*.jpg
+static/
+media/
