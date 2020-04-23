@@ -1,0 +1,1 @@
+web: gunicorn ms4/ms4.wsgi:application
