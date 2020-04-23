@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/taikatta/Mileston4-EggSellNT.svg?branch=master)](https://travis-ci.org/taikatta/Mileston4-EggSellNT)
+
+
 # Egg - Sell - NT
 
 ## Table of Contents
