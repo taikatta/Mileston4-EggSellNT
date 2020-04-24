@@ -3,6 +3,13 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="{% url 'index' %}">Egg - Sell - NT</a>
+  <div class="d-flex order-lg-1 ml-auto pr-2">
+    <a href="{% url 'view_cart' %}" class="nav-link"><i class="fas fa-shopping-cart"></i>
+      {% if product_count > 0 %}
+      <label class="badge badge-warning">{{ product_count }}</label>
+      {% endif %}
+    </a>
+  </div>
   <div class="d-none d-sm-block">
     <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keywords">
@@ -36,20 +43,11 @@
           <input type="hidden">
         </form>
       </li>
-
       {% else %}
       <li class="nav-item">
         <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
       </li>
-
       {% endif %}
-      <li>
-        <a href="{% url 'view_cart' %}" class="nav-link">Cart
-          {% if product_count > 0 %}
-          <label class="badge badge-warning">{{ product_count }}</label>
-          {% endif %}
-        </a>
-      </li>
     </ul>
   </div>
 </nav>
