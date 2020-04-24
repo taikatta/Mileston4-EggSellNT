@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<section id="team">
+    <div class="container">
+        <div class="email text-center">
+            <p>Our email address: info@eggsellnt.com</p>
+            <p>Our email address: info@eggsellnt.com</p>
+        </div>
+        <div class="row">
+            {% for order_item in orders %}
+            <p>{{ order_item.full_name }}</p>
+            {% for item in items %}
+            <p>{{ item.product }}</p>
+            {% endfor %}
+     <!-- full_name = models.CharField(max_length=50, blank=False)
+    phone_number = models.CharField(max_length=20, blank=False)
+    country = models.CharField(max_length=40, blank=False)
+    postcode = models.CharField(max_length=20, blank=True)
+    town_or_city = models.CharField(max_length=40, blank=False)
+    street_address1 = models.CharField(max_length=40, blank=False)
+    street_address2 = models.CharField(max_length=40, blank=True)
+    county = models.CharField(max_length=40, blank=False)
+    date = models.DateField()
+
+    def __str__(self):
+        return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
+
+
+class OrderLineItem(models.Model):
+    order = models.ForeignKey(Order, null=False, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, null=False, on_delete=models.CASCADE)
+    quantity = models.IntegerField(blank=False)
+        -->
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

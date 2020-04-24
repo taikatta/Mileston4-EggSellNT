@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
+from checkout.models import Order, OrderLineItem
 
 
 def register(request):
@@ -64,3 +65,10 @@ def logout(request):
         messages.success(request, "You are now logged out!")
     return redirect('index')
 
+def profile(request):
+    orders = Order.objects.all()
+    items = OrderLineItem.objects.all()
+    context = {'orders': orders,
+        'items': items
+        }
+    return render(request, "pages/profile.html", context)
