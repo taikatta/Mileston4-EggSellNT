@@ -10,10 +10,9 @@
         </div>
         <div class="row">
             {% for order_item in orders %}
-            <p>{{ user }}</p>
-            <p>{{ order_item }}</p>
+            <p>{{ order_item.full_name }}</p>
             {% for item in items %}
-            <p>{{ item }}</p>
+            <p>{{ item.product }}</p>
             {% endfor %}
      <!-- full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
