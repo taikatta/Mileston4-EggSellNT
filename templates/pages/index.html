@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<section id="home">
-
+<section id="home" onclick="popup()">
     {% if messages %}
     {% for message in messages %}
     <div id="message" class="container">
