@@ -30,16 +30,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
-    <script type="text/javascript">
-        var openPage = true;
-        function popup() {
-            if (openPage) {
-                window.location.href="{% url 'products' %}";
-                openPage = false;
-            }
-        }
-    </script>
-
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
