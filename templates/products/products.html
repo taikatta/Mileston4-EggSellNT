@@ -30,7 +30,7 @@
         <div class="row">
             {% if products %}
             {% for product in products %}
-            <div class="col-6 col-sm-6 col-lg-4 d-flex align-items-stretch">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="card">
                     <a href="{% url 'product' product.id %}">
                         <img class="card-img-top" src="{{ product.photo_main.url }}" alt="Egg">
