@@ -54,11 +54,12 @@
     </div>
     {% endif %}
     {% endfor %}
-    <div class="row">
-        <p>Total</p>
-        <p><span aria-hidden="true"><i class="fas fa-euro-sign"></i></span>{{ total }}</p>
+    <div class="row checkout">
+        <div class="mx-auto">
+            <h5> Total (including VAT): <span aria-hidden="true"><i class="fas fa-euro-sign"></i></span>{{ total }}
+            </h5>
+        </div>
     </div>
-
     <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
         <legend>Payment Details</legend>
 
