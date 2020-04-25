@@ -3,9 +3,6 @@
 {% load humanize %}
 
 {% block content %}
-{% if searchterm %}
-<h3>Search result for <strong>{{ searchterm }}</strong></h3>
-{% endif %}
 
 {% if messages %}
 {% for message in messages %}
@@ -27,6 +24,9 @@
 
 <section id="products">
     <div class="container">
+        {% if searchterm %}
+        <h4>Search result for <strong>{{ searchterm }}</strong></h4>
+        {% endif %}
         <div class="row">
             {% if products %}
             {% for product in products %}
@@ -39,8 +39,8 @@
                         <h4 class="card-title">{{ product.name }}</h4>
                         <h6>€{{ product.price | intcomma }}</h6>
                         <div class="info-btn">
-                        <a href="{% url 'product' product.id %}" class="btn btn-secondary">More Info</a>
-                    </div>
+                            <a href="{% url 'product' product.id %}" class="btn btn-secondary">More Info</a>
+                        </div>
                         <form method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
                             <div class="input-group">
