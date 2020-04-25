@@ -24,7 +24,7 @@
                                 <div class="input-group-addon">{{item.quantity}}</div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit"
+                        <button type="submit" class="btn btn-primary amend-btn"><span class="glyphicon glyphicon-edit"
                                 aria-hidden="true"></span>Amend</button>
                     </form>
                 </p>
@@ -33,11 +33,17 @@
         {% endif %}
         {% endfor %}
     </div>
-    <div class="row">
-        <p>Total: </p>
-        <p><span aria-hidden="true"><i class="fas fa-euro-sign"></i></span>{{ total }}</p>
-        <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign"
-                aria-hidden="true"></span>Checkout</a>
+    <div class="row checkout">
+        <div class="mx-auto">
+            <h5> Cart Total (including VAT): <span aria-hidden="true"><i class="fas fa-euro-sign"></i></span>{{ total }}
+            </h5>
+        </div>
+        <a href="{% url 'checkout' %}" class="btn btn-success col-12 checkout-btn" role="button"><span
+                class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+        <div class="mx-auto">
+            <h6>Free shipping on all orders.</h6>
+        </div>
+
     </div>
 </div>
 {% endblock %}
