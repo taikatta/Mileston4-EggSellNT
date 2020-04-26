@@ -19,23 +19,19 @@
                                 <h4 class="card-title">{{ item.product.name }}</h4>
                                 <p class="card-text">{{ item.product.description }}</p>
                                 <p><i class="fas fa-euro-sign"></i>{{ item.product.price }}</p>
-                                <p>
-                                    <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                                        {% csrf_token %}
-                                        <div class="form-group">
-                                            <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                                            <div class="input-group">
-                                                <div class="input-group-addon">Qty</div>
-                                                <input name="quantity" type="number" min="0" max="999"
-                                                    class="form-control">
-                                                <div class="input-group-addon">{{item.quantity}}</div>
-                                            </div>
+                                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">Qty</div>
+                                            <input id="exampleInputAmount" name="quantity" type="number" min="0" max="999" class="form-control">
+                                            <div class="input-group-addon">{{item.quantity}}</div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary amend-btn"><span
-                                                class="glyphicon glyphicon-edit"
-                                                aria-hidden="true"></span>Amend</button>
-                                    </form>
-                                </p>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary amend-btn"><span
+                                            class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -56,21 +52,19 @@
                         <h3>{{ item.product.name }}</h3>
                         <p class="product-description">{{ item.product.description }}</p>
                         <p><i class="fas fa-euro-sign"></i>{{ item.product.price }}</p>
-                        <p>
-                            <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">Qty</div>
-                                        <input name="quantity" type="number" min="0" max="999" class="form-control">
-                                        <div class="input-group-addon">{{item.quantity}}</div>
-                                    </div>
+                        <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="exampleInputAmount1" class="sr-only">New Qty</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">Qty</div>
+                                    <input name="quantity" id="exampleInputAmount1" type="number" min="0" max="999" class="form-control">
+                                    <div class="input-group-addon">{{item.quantity}}</div>
                                 </div>
-                                <button type="submit" class="btn btn-primary amend-btn"><span class="glyphicon glyphicon-edit"
-                                        aria-hidden="true"></span>Amend</button>
-                            </form>
-                        </p>
+                            </div>
+                            <button type="submit" class="btn btn-primary amend-btn"><span
+                                    class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+                        </form>
                     </div>
                 </div>
             </div>

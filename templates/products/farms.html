@@ -11,7 +11,7 @@
                     <img class="card-img-top" src="{{ farm.photo.url }}" alt="Farms">
                     <div class="card-body">
                         <h3 class="card-title text-center">{{ farm.name }}</h3>
-                        <h6 class="card-text">{{ farm.description }}<h6>
+                        <h6 class="card-text">{{ farm.description }}</h6>
                         <div class="text-center">
                             <a href="{% url 'products_by_farm' farm.id %}" class="btn btn-secondary stretched-link">Eggs from {{ farm.name }}</a>
                         </div>
