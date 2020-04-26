@@ -28,19 +28,34 @@
           <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
         </form>
       </li>
-      <li class="nav-item active">
+      <li
+      {% if '/products/products' == request.path %}
+      class="nav-item active"
+      {% else$}
+      class="nav-item"
+      {% endif %}>
         <a class="nav-link" href="{% url 'products' %}">Shop <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li
+      {% if '/products/farms' == request.path %}
+      class="nav-item active"
+      {% else$}
+      class="nav-item"
+      {% endif %}>
         <a class="nav-link" href="{% url 'farms' %}">Farms</a>
       </li>
-      <li class="nav-item">
+    <!--   <li class="nav-item">
         <a class="nav-link" href="{% url 'about' %}">Contact</a>
       </li>
-
+      -->
       {% if user.is_authenticated %}
       <span class="navbar-text">Welcome, {{ user.first_name }}!</span>
-      <li class="nav-item">
+      <li
+      {% if '/accounts/profile' == request.path %}
+      class="nav-item active"
+      {% else$}
+      class="nav-item"
+      {% endif %}>
         <a class="nav-link" href="{% url 'profile' %}">Profile</a>
       </li>
       <li class="nav-item mr-3">
