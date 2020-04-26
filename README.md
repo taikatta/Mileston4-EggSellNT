@@ -100,12 +100,29 @@ Sans-serif is used as the default backup font in case when Nunito Sans was not p
 
 [Back to Top](#table-of-contents)
 
-### Wireframes:
-
 #### Initial Wireframes:
+
+Originally on the home page I wanted to have one background picture and 3 of our latest donated books, but then I discovered Parallax (Materialize). Parallax is an effect where the background image is moved at a different speed than the foreground content while scrolling, so I decided to use Parallax instead.
+
+[Mobile View - Register, Login and Home pages](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/initial_design_mobile_register_login_home.png)
+
+[Mobile View - Details and Cart pages](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/initial_design_mobile_details_cart.png)
+
+[Mobile View - Shop and About Us pages](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/initial_design_mobile_shop_about_us.png)
+
+[Desktop View - Shop, Home and About Us pages](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/initial_design_desktop_shop_home_about_us.png)
 
 
 #### Final Wireframes:
+
+[Mobile View - Farms and Login page](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/final_design_mobile_farms_login.png)
+
+[Mobile View - Shop and Home page](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/final_design_mobile_shop_home.png)
+
+[Desktop View - Farms and Login page](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/final_design_desktop_farms_login.png)
+
+[Desktop View - Shop and Home page](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/final_design_desktop_shop_home.png)
+
 
 [Back to Top](#table-of-contents)
 
@@ -139,7 +156,7 @@ Sans-serif is used as the default backup font in case when Nunito Sans was not p
 
 * Django
 * <a href="https://fonts.google.com/specimen/Nunito">Google Fonts</a> Used Nunito Sans fonts
-* <a href="https://www.favicon-generator.org/">Favicon Generator</a> Used to find the right Favicon for the project.
+* <a href="https://favicon.io/favicon-converter/">Favicon Generator</a> Used to make the right Favicon for the project.
 * <a href="https://compressjpeg.com/">compressjpg</a> Used to compress all my images.
 * <a href="https://www.canva.com/photos/">Canva photos</a> Used to find the background images.
 * <a href="https://validator.w3.org/">W3C Validator</a> Used to check the validity of my HTML and CSS.
@@ -192,3 +209,6 @@ https://miniwebtool.com/django-secret-key-generator/
 I attended Python django dev to deployment course by Brad Traversyon on Udemy, I used his solution for message alert.
 https://www.udemy.com/course/python-django-dev-to-deployment/
 
+
+W3C errors:
+ The value of the for attribute of the label element must be the ID of a non-hidden form control.
