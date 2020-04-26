@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="broken">
+    <div class="wrong">
+        <h5>Oops! Something is broken.</h5>
+        <p class="hide-on-small-only">We can’t find the page you were looking for.</p>
+        <p>Did you want to <a class="link_color" href="{% url 'products' %}">buy</a> an egg?</p>
+    </div>
+</section>
+
+{% endblock %}
