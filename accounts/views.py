@@ -24,15 +24,20 @@ def register(request):
                 return redirect('register')
             else:
                 if User.objects.filter(email=email).exists():
-                    messages.error(request, 'That email is already used! Please choose a different one.')
+                    messages.error(request,
+                                   'That email is already used! Please choose a different one.')
                     return redirect('register')
                 else:
-                    user = User.objects.create_user(username=username, password=password,email=email, first_name=first_name, last_name=last_name)
+                    user = User.objects.create_user(username=username,
+                                                    password=password,
+                                                    email=email,
+                                                    first_name=first_name,
+                                                    last_name=last_name)
 
                     # Login after register
                     auth.login(request, user)
                     messages.success(request, 'Welcome!')
-                    return redirect('index')    
+                    return redirect('index')
         else:
             messages.error(request, 'Passwords do not match!')
             return redirect('register')
@@ -54,10 +59,12 @@ def login(request):
             messages.success(request, 'Welcome!')
             return redirect('index')
         else:
-            messages.error(request, "Invalid credentials, please try it again!")
+            messages.error(request,
+                           "Invalid credentials, please try it again!")
             return redirect('login')
     else:
         return render(request, 'accounts/login.html')
+
 
 def logout(request):
     if request.method == "POST":
@@ -65,10 +72,11 @@ def logout(request):
         messages.success(request, "You are now logged out!")
     return redirect('index')
 
+
 def profile(request):
     orders = Order.objects.all()
     items = OrderLineItem.objects.all()
     context = {'orders': orders,
-        'items': items
-        }
+               'items': items
+               }
     return render(request, "pages/profile.html", context)

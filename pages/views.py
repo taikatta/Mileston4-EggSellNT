@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from company.models import Employee
 
+
 # Create your views here.
 def index(request):
     """
