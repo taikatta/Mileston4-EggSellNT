@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static from staticfiles %}
 
 <section id="profile">
     <div class="container">
-        <div class="email text-center">
-            <p>Welcome, {{ user.first_name }}!</p>
-            <p>Your Order History:</p>
+        <div class="text-center">
+            <h5>Welcome, {{ user.first_name }}!</h5>
+            <p>Your Order History</p>
         </div>
         {% for order in orders reversed %}
         <div>
