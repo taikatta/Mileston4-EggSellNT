@@ -51,12 +51,12 @@
       {% if user.is_authenticated %}
       <span class="navbar-text">Welcome, {{ user.first_name }}!</span>
       <li
-      {% if '/accounts/profile' == request.path %}
+      {% if '/checkout/user_order' == request.path %}
       class="nav-item active"
       {% else$}
       class="nav-item"
       {% endif %}>
-        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+        <a class="nav-link" href="{% url 'user_order' %}">Profile</a>
       </li>
       <li class="nav-item mr-3">
         <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
