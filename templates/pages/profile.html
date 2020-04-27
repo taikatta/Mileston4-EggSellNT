@@ -8,22 +8,21 @@
             <p>Your Order History</p>
         </div>
         {% for order in orders reversed %}
+        <p>Date: {{ order.order.date }}</p>
         <div>
             <table class="table">
                 <thead>
                     <tr class="table-secondary">
-                        <th scope="col">Date</th>
-                        <th scope="col">Quantity</th>
                         <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
                         <th scope="col">Price</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for item in order.items %}
                     <tr>
-                        <td>{{ order.order.date }}</td>
-                        <td>{{ item.quantity }}</td>
                         <td>{{ item.product.name }}</td>
+                        <td>{{ item.quantity }}</td>
                         <td>{{ item.product.price }}</td>
                     </tr>
                     {% endfor %}
