@@ -17,7 +17,6 @@
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title">{{ item.product.name }}</h4>
-                                <p class="card-text">{{ item.product.description }}</p>
                                 <p><i class="fas fa-euro-sign"></i>{{ item.product.price }}</p>
                                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                                     {% csrf_token %}
@@ -49,7 +48,6 @@
                     <img class="card-img-top" src="{{ item.product.photo_main.url }}" alt="Egg">
                     <div class="cart-card-body">
                         <h3>{{ item.product.name }}</h3>
-                        <p class="product-description">{{ item.product.description }}</p>
                         <p><i class="fas fa-euro-sign"></i>{{ item.product.price }}</p>
                         <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                             {% csrf_token %}
