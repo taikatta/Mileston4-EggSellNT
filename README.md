@@ -129,6 +129,10 @@ Originally on the home page I wanted to have one background picture and 3 of our
 
 ### Features:
 
+#### Open Graph (OG)
+
+I wanted to have a nice photo and text when the link is shared on Messenger, so I added OG meta tags to base.html and used Sharing Debugger (Facebook developer tools) to debug. I made a typo in the title, I had to fix it. 
+
 
 #### Features Left to Implement:
 
@@ -156,8 +160,7 @@ Originally on the home page I wanted to have one background picture and 3 of our
 
 * Django
 * <a href="https://fonts.google.com/specimen/Nunito">Google Fonts</a> Used Nunito Sans fonts
-* <a href="https://favicon.io/favicon-converter/">Favicon Generator</a> Used to make the right Favicon for the project.
-* <a href="https://compressjpeg.com/">compressjpg</a> Used to compress all my images.
+* <a href="https://favicon.io/favicon-converter/">Favicon Generator</a> Used to make the right Favicon for the project, I converted the home page background image to a favicon.
 * <a href="https://www.canva.com/photos/">Canva photos</a> Used to find the background images.
 * <a href="https://validator.w3.org/">W3C Validator</a> Used to check the validity of my HTML and CSS.
 * <a href="http://pep8online.com/">PEP 8 Online Validator</a> Used to check my Python code.
@@ -168,6 +171,15 @@ Originally on the home page I wanted to have one background picture and 3 of our
 
 ### Testing
 
+During the development of the project I carries out testing. 
+
+#### Functionality Test
+
+| Nr | Test          | Action | Before image  | After image  | Test result |
+| ---|:-------------:| :----: | :-----:| :-----:| :-----:|
+| 1 | Clicking anywhere on home page | Click anywhere  | ![Home page page](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Home page| ![Shop](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Shop | Passed |
+| 2 |  Using search bar |  Search fro blue  | ![Search for blue](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search.png) Search|![search result](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search_result.png) Search result|Passed |
+| 3 |  Adding eggs to cart | Adding blue egg to cart | ![Adding egg](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Admin | ![Cart](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/cart.png) Cart  |  Passed |
 
 
 #### Code Validation
