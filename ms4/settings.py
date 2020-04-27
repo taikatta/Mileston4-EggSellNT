@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","egg-sell-nt.herokuapp.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "egg-sell-nt.herokuapp.com"]
 
 
 # Application definition
@@ -43,7 +44,6 @@ INSTALLED_APPS = [
     'products',
     'accounts',
     'cart',
-    'company',
     'farm',
     'checkout',
     'django.contrib.humanize',
@@ -167,7 +167,6 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
 
 # Messages
-from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
