@@ -14,10 +14,11 @@ stripe.api_key = settings.STRIPE_SECRET
 
 def user_order(request):
     orders = request.user.orders.all()
+    order_items = []
     for order in orders:
-        print(order)
-        print("\n")
-    return render(request, "pages/profile.html", {"orders": orders})
+        order_products = OrderLineItem.objects.filter(order=order)
+        order_items.append({"order": order, "items": order_products})
+    return render(request, "pages/profile.html", {"orders": order_items})
 
 
 @login_required(login_url='login')
@@ -29,8 +30,8 @@ def checkout(request):
             if order_form.is_valid() and payment_form.is_valid():
                 order = order_form.save(commit=False)
                 order.date = timezone.now()
+                order.user = request.user
                 order.save()
-
                 cart = request.session.get('cart', {})
                 total = 0
                 for id, quantity in cart.items():
