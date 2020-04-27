@@ -2,17 +2,27 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import MakePaymentForm, OrderForm
-from .models import OrderLineItem
+from .models import Order, OrderLineItem
 from django.conf import settings
 from django.utils import timezone
 from products.models import Product
+from django.contrib.auth.models import User
 import stripe
 
 stripe.api_key = settings.STRIPE_SECRET
 
+
+def user_order(request):
+    orders = request.user.orders.all()
+    for order in orders:
+        print(order)
+        print("\n")
+    return render(request, "pages/profile.html", {"orders": orders})
+
+
 @login_required(login_url='login')
 def checkout(request):
-        if request.method=="POST":
+        if request.method == "POST":
             order_form = OrderForm(request.POST)
             payment_form = MakePaymentForm(request.POST)
 
@@ -27,33 +37,40 @@ def checkout(request):
                     product = get_object_or_404(Product, pk=id)
                     total += quantity * product.price
                     order_line_item = OrderLineItem(
-                        order = order,
-                        product = product,
-                        quantity = quantity
+                        order=order,
+                        product=product,
+                        quantity=quantity
                     )
                     order_line_item.save()
 
                 try:
                     customer = stripe.Charge.create(
-                        amount = int(total * 100),
-                        currency = "EUR",
-                        description = request.user.email,
-                        card = payment_form.cleaned_data['stripe_id'],
+                        amount=int(total * 100),
+                        currency="EUR",
+                        description=request.user.email,
+                        card=payment_form.cleaned_data['stripe_id'],
                     )
                 except stripe.error.CardError:
                     messages.error(request, "Your card was declined!")
 
                 if customer.paid:
-                    messages.success(request, "You have successfully paid! Thank you!")
+                    messages.success(request,
+                                     "You have successfully paid! Thank you!")
                     request.session['cart'] = {}
                     return redirect(reverse('products'))
                 else:
-                    messages.error(request, "Unable to take payment")
+                    messages.error(request,
+                                   "Unable to take payment")
             else:
                 print(payment_form.errors)
-                messages.error(request, "We were unable to take a payment with that card!")
+                messages.error(request,
+                               "Unable to take a payment with that card!")
         else:
             payment_form = MakePaymentForm()
             order_form = OrderForm()
-        
-        return render(request, "checkout/checkout.html", {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
+
+        return render(request,
+                      "checkout/checkout.html",
+                      {'order_form': order_form,
+                       'payment_form': payment_form,
+                       'publishable': settings.STRIPE_PUBLISHABLE})
