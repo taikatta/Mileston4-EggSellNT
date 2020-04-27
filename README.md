@@ -186,6 +186,15 @@ During the development of the project I carries out testing.
 | 7 |  Farms page | Clicking on Farms in Navbar | ![Homa page](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Home page | ![Farms](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/farms.png) Farm view |  Passed |
 | 8 |  Logout | Clicking on Logout | ![Shop](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Shop view| ![Logout success](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/logged_out_success.png) Logout success|  Passed |
 
+#### Browser Compatibility test
+
+| Nr | Browser         | Image  | Test result |
+| ---|:-------------:| :---------------: | :-----:|
+| 1 | Chrome | ![Chrome](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/chrome.png) Chrome | Passed |
+| 2 | Safari | ![Safari](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/safari.png) Safari| Passed |
+| 3 | Firefox | ![Firefox](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/firefox.png) Firefox | Passed |
+
+
 
 #### Code Validation
 
