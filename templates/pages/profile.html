@@ -1,42 +1,37 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static from staticfiles %}
 
-
-<section id="team">
+<section id="profile">
     <div class="container">
         <div class="email text-center">
-            <p>Our email address: info@eggsellnt.com</p>
-            <p>Our email address: info@eggsellnt.com</p>
+            <p>Welcome, {{ user.first_name }}!</p>
+            <p>Your Order History:</p>
         </div>
-        <div class="row">
-            {% for order_item in orders %}
-            <p>{{ order_item.full_name }}</p>
-            {% for item in items %}
-            <p>{{ item.product }}</p>
-            {% endfor %}
-     <!-- full_name = models.CharField(max_length=50, blank=False)
-    phone_number = models.CharField(max_length=20, blank=False)
-    country = models.CharField(max_length=40, blank=False)
-    postcode = models.CharField(max_length=20, blank=True)
-    town_or_city = models.CharField(max_length=40, blank=False)
-    street_address1 = models.CharField(max_length=40, blank=False)
-    street_address2 = models.CharField(max_length=40, blank=True)
-    county = models.CharField(max_length=40, blank=False)
-    date = models.DateField()
-
-    def __str__(self):
-        return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
-
-
-class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, null=False, on_delete=models.CASCADE)
-    quantity = models.IntegerField(blank=False)
-        -->
-            {% endfor %}
+        {% for order in orders reversed %}
+        <div>
+            <table class="table">
+                <thead>
+                    <tr class="table-secondary">
+                        <th scope="col">Date</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in order.items %}
+                    <tr>
+                        <td>{{ order.order.date }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.product.price }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
+        {% endfor %}
     </div>
 </section>
-
-
 {% endblock %}
