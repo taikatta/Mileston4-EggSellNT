@@ -178,8 +178,13 @@ During the development of the project I carries out testing.
 | Nr | Test          | Action | Before image  | After image  | Test result |
 | ---|:-------------:| :----: | :-----:| :-----:| :-----:|
 | 1 | Clicking anywhere on home page | Click anywhere  | ![Home page page](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Home page| ![Shop](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Shop | Passed |
-| 2 |  Using search bar |  Search for blue  | ![Search for blue](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search.png) Search for blue|![search result](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search_result.png) Search result|Passed |
-| 3 |  Adding eggs to cart | Adding blue egg to cart | ![Adding egg](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/adding_eggs_to+cart.png) Adding eggs | ![Cart](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/cart.png) Checking cart  |  Passed |
+| 2 |  Register | User register | ![Register](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/register.png) Register view | ![Register success](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/register_success.png) Register sucess |  Passed |
+| 3 |  Login | User login | ![Login](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/login.png) Login view | ![Login success](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/register_success.png) Login sucess |  Passed |
+| 4 |  Using search bar |  Search for blue  | ![Search for blue](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search.png) Search for blue|![search result](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search_result.png) Search result|Passed |
+| 5 |  Adding eggs to cart | Adding blue egg to cart | ![Adding egg](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/adding_eggs_to+cart.png) Adding eggs | ![Cart](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/cart.png) Checking cart  |  Passed |
+| 6 |  Checkout | Checkout | ![Checkout view](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/checkout.png) Checkout view | ![Paying done](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/checkout_success.png) Paying done |  Passed |
+| 7 |  Farms page | Clicking on Farm | ![Homa page](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Home page | ![Farms](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/farms.png) Farm view |  Passed |
+| 8 |  Logout | Clicking on Logout | ![Shop](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Shop view| ![Logout success](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/logged_out_success.png) Logout success|  Passed |
 
 
 #### Code Validation
