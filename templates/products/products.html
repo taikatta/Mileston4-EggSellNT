@@ -4,26 +4,11 @@
 
 {% block content %}
 
-{% if messages %}
-{% for message in messages %}
-<div id="message">
-    <div class="alert alert-{{ message.tags }} alert-dismissible text-center" role="alert">
-        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
-        <strong>
-            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
-            Error:
-            {% else %}
-            {{ message.tags | title}}
-            {% endif %}
-        </strong>
-        {{ message }}
-    </div>
-</div>
-{% endfor %}
-{% endif %}
-
 <section id="products">
     <div class="container">
+        <!-- Messages -->
+        {% include 'partials/_messages.html' %}
+        
         {% if searchterm %}
         <h4>Search result for <strong>{{ searchterm }}</strong>:</h4>
         {% endif %}
