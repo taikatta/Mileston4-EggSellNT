@@ -238,7 +238,94 @@ I tried to test responsivness on [Am I Responsive](http://ami.responsivedesign.i
 
 The following steps were taken in order to deploy this site to Heroku:
 
-1. 
+1. Created a new app in `Heroku` with a unique name, chose my region
+
+2. Went to `Resources`, within Add-ons searched `Heroku Postgres`, chose Hobby Dev - Free version, then clicked Provision button.
+
+3. In Settings clicked on `Reveal Config Vars` button, and copied the value of `DATABASE_URL`
+
+4. Returned to terminal window and run `sudo pip3 install dj_database_url`
+
+5. Also did `sudo pip3 install psycopg2`
+
+6. Went to `settings.py` and added `import dj_database_url` and updated `DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}` 
+
+7. I run `python3 manage.py makemigrations`, then `python3 manage.py migrate` to migrate all existing migrations to postgres database.
+
+8. I created a superuser: `python3 manage.py createsuperuser`
+
+9. Returned to `Heroku`. In `Settings` clicked on `Reveal Config Vars` button, and added all the following config vars from `env.py`:
+
+| Key         | Value | 
+|:-------------:| :----: | 
+|  AWS_ACCESS_KEY_ID | secret key here  |
+|  AWS_SECRET_ACCESS_KEY | secret key here |
+|  DATABASE_URL | secret key here |
+|  DISABLE_COLLECTSTATIC| 1 |
+|  SECRET_KEY | secret key here |
+|  STRIPE_PUBLISHABLE | secret key here |
+|  STRIPE_SECRET| secret key here |
+
+10. Clicked to `Deploy`, then `GitHub`, searched for my repository and clicked to `Connect` button.
+
+11. Logged in to `Amazon AWS`, went to `S3` and created a new `S3` bucket. 
+
+12. Returned to terminal window and run `sudo pip3 install django-storages` and `sudo pip3 install boto3`. Went to `settings.py` and added `storages` to `INSTALLED_APPS`.
+
+13. Also in `settings.py` the following lines are added:
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000'
+}
+
+AWS_STORAGE_BUCKET_NAME = 'egg-sell-nt'
+AWS_S3_REGION_NAME = 'eu-west-1'
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+14. Updated `env.py` with `AWS` keys (they are from`S3`)
+
+15. Created `custom_storages.py` at the top level:
+
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+
+16. Went to `settings.py` and added:
+
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+
+17. Returned to terminal window and run `python3 manage.py collectstatic`
+
+11. And also run `sudo pip3 install gunicorn`
+
+12. Created a requirements.txt file using the terminal command `pip3 freeze > requirements.txt`
+
+13. Created a `Procfile` using the following command: `echo web: gunicorn ms4.wsgi:application`
+
+14. Ran `git add .`, `git commit -m "my commit message"` and `git push` commands to push all changes to my GitHub repository.
+
+15. Returned to `Heroku` and hit `Deploy Branch`
+
+16. Once the build is complete, click on `Open app`
+
+17. Went to `settings.py` and added `egg-sell-nt.herokuapp.com` to `ALLOWED_HOSTS`
+
+18. Ran `git add .`, `git commit -m "my commit message"` and `git push` commands to push all changes in `settings.py`to my GitHub repository.
+
 
 ### Disclaimer
 
@@ -248,9 +335,6 @@ This project was created for educational use only.
 
 
 
-
-
-https://miniwebtool.com/django-secret-key-generator/
 
 
 
