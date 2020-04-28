@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 
 
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='orders')
+    user = models.ForeignKey(
+        User, on_delete=models.DO_NOTHING, related_name='orders')
     full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
     country = models.CharField(max_length=40, blank=False)
