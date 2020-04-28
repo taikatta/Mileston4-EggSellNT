@@ -2,16 +2,17 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
 
-# Create your views here.
 def view_cart(request):
     """
-    This view renders the cart contents page
+    Renders the cart contents page
     """
     return render(request, "cart/cart.html")
 
 
 def add_to_cart(request, id):
-    """Add a quantity of the specified product to the cart"""
+    """
+    Add a quantity of the specified product to the cart
+    """
     try:
         quantity = int(request.POST.get('quantity'))
     except:

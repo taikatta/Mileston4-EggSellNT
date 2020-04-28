@@ -5,6 +5,10 @@ from checkout.models import Order, OrderLineItem
 
 
 def register(request):
+    """
+    Users can register a new account, after registering user
+    is redirected to the home page.
+    """
     if request.method == 'POST':
 
         # Get form values
@@ -46,6 +50,9 @@ def register(request):
 
 
 def login(request):
+    """
+    Renders the login page
+    """
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -67,6 +74,9 @@ def login(request):
 
 
 def logout(request):
+    """
+    Logout the user
+    """
     if request.method == "POST":
         auth.logout(request)
         messages.success(request, "You are now logged out!")
@@ -74,6 +84,9 @@ def logout(request):
 
 
 def profile(request):
+    """
+    Renders profile page, where the user can check their order history
+    """
     orders = Order.objects.all()
     items = OrderLineItem.objects.all()
     context = {'orders': orders,
