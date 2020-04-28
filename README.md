@@ -5,29 +5,27 @@
 
 ## Table of Contents
 
-1. [Summary](#Summary)
+1. [Project purpose](#Project-purpose)
 
-2. [Project purpose](#Project-purpose)
-
-3. [UX](#ux)
+2. [UX](#ux)
     - [User stories](#User-stories)
     - [Admin stories](#Admin-stories)
 
-4. [Design and colors](#Design-and-colors)
+3. [Design and colors](#Design-and-colors)
     
-5. [Wireframes](#Wireframes)
+4. [Wireframes](#Wireframes)
 
-6. [Features](#Features)
+5. [Features](#Features)
 
-7. [Technology Used](#Technology-Used)
+6. [Technology Used](#Technology-Used)
 
-8. [Testing](#Testing)
+7. [Testing](#Testing)
 
-9. [Credits](#Credits)
+8. [Credits](#Credits)
 
-10. [DEPLOYMENT](#DEPLOYMENT)
+9. [DEPLOYMENT](#DEPLOYMENT)
 
-11. [Disclaimer](#Disclaimer)
+10. [Disclaimer](#Disclaimer)
 
 [Back to Top](#table-of-contents)
 
@@ -40,19 +38,19 @@ The site allows users to search eggs, they can search by farm as well, and after
 The project has the following sections:
 
 * Home page
-Contains a background image.
+Contains a background image, clicking anywhere on the background image opens the shop page. The javascript behind it is from [Stackoverflow](https://stackoverflow.com/questions/40749122/open-new-tab-when-user-click-anywhere-on-the-page-only-once)
 
 * Shop page
-Contains all the available eggs.
+Contains all the available products (eggs).
 
 * Farm page
 You can view the farms from where the eggs arrive.
 
-* Contact
-Contains our contact details and the names of our employees with pictures.
-
 * Login / Register page
 Login page with option to register if someone is not a member yet.
+
+* Profile page
+If the user is logged in there is a Profile page, where the user can check their order history.
 
 * Cart
 After a product is added to the cart, the user can view the containt of the cart here.
@@ -64,11 +62,11 @@ After a product is added to the cart, the user can view the containt of the cart
 
 * As a user I would like to be able to view the site on any device I may have, including mobile, tablet, desktop.
 
-* As a user I would like to be able to search to find what I need.
+* As a user I would like to be able to search to a keyword to find what I need.
 
 * As a user I would like to read more details about a product after clicking on it.
 
-* As a user I would like to be able to find information about my previous order.
+* As a user I would like to be able to find information about my previous orders.
 
 * As a user I would like to search based on from which farm the eggs are coming from.
 
@@ -94,9 +92,9 @@ Sans-serif is used as the default backup font in case when Nunito Sans was not p
 
 #### Colors:
 
+* ![#495057](https://placehold.it/15/495057/000000?text=+) #4284A4 - font color
 
-
-
+* ![#F2F4F5](https://placehold.it/15/F2F4F5/000000?text=+) #5B8BA3 - card background color
 
 [Back to Top](#table-of-contents)
 
@@ -142,36 +140,54 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 
 * Required: HTML, CSS, JavaScript, Python+Django, Postgres, Stripe payments
 
-#### Languages, Frameworks, Editors & Version Control:
+#### Languages:
 
 * HTML5
 * CSS3
 * JavaScript
 * Python
-* Bootstrap
-* Django
-* jQuery
-* VSCode: Was used as a code editor.
-* Git: Version control.
+
+#### Libraries, frameworks, tools used
+
+* <a href="https://getbootstrap.com/">Bootstrap</a> framework was used for developing a responsive, mobile-first website
+* <a href="https://www.djangoproject.com/">Django</a> as python web framework used for rapid development, maintainable, clean design
+* <a href="https://jquery.com/">jQuery</a> JavaScript library to simplify HTML DOM manipulation
+* <a href="https://fonts.google.com/specimen/Nunito">Google Fonts</a> Used Noto Sans fonts
+* <a href="https://fontawesome.com/">FontAwesome</a> as icon provider
+* <a href="https://stripe.com/">Stripe</a> made it possible to receive payments for the eggs
+* <a href="https://pypi.org/project/psycopg2/">Psycopg2</a> as database adapter for the Python
+* <a href="https://gunicorn.org/">Gunicorn</a> or Green Unicorn, a WSGI server implementation used to run Python web application
+* <a href="https://code.visualstudio.com/">VSCode</a> was used as a code editor
+* <a href="https://git-scm.com/">Git</a> Version control
 * <a href="https://github.com">Github</a> Used as a Git repository hosting service
 * <a href="https://www.heroku.com/">Heroku</a> Is a container-based cloud Platform, I used Heroku to deploy this app.
-
-#### Tools Used:
-
-* Django
-* <a href="https://fonts.google.com/specimen/Nunito">Google Fonts</a> Used Nunito Sans fonts
-* <a href="https://favicon.io/favicon-converter/">Favicon Generator</a> Used to make the right Favicon for the project, I converted the home page background image to a favicon.
-* <a href="https://www.canva.com/photos/">Canva photos</a> Used to find the background images.
-* <a href="https://validator.w3.org/">W3C Validator</a> Used to check the validity of my HTML and CSS.
-* <a href="http://pep8online.com/">PEP 8 Online Validator</a> Used to check my Python code.
-* <a href="https://moqups.com">moquaps</a> Used to create wireframes.
+<a href="https://favicon.io/favicon-converter/">Favicon Generator</a> Used to make the right Favicon for the project, I converted the home page background image to a favicon.
+<a href="https://www.canva.com/photos/">Canva photos</a> Used to find the background images.
+<a href="https://validator.w3.org/">W3C Validator</a> Used to check the validity of my HTML and CSS.
+<a href="http://pep8online.com/">PEP 8 Online Validator</a> Used to check my Python code.
+<a href="https://moqups.com">moquaps</a> Used to create wireframes.
+<a href="https://compressjpeg.com/">compressjpg</a> and <a href="https://compresspng.com/">compresspng</a>Used to compress all my images.
 * facebook for developers: I used the [Sharing Debugger](https://developers.facebook.com/tools/debug/) to see the information that is used when my website content is shared on Facebook, Messenger and other places.
+* <a href="https://travis-ci.org/">Travis CI</a> for continuous integration
+* <a href="https://aws.amazon.com/s3/">AWS S3 Bucket</a> as a cloud storage
+* <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html">Boto3 </a>to make use of Amazon S3
+* <a href="https://python-pillow.org/">Pillow</a> for saving image file formats
+
+
+#### Databases
+
+* <a href="https://www.postgresql.org/">PostgreSQL</a> database service provided directly by Heroku
+* <a href="https://www.sqlite.org/index.html">SQlite3</a> provided by django
 
 [Back to Top](#table-of-contents)
 
 ### Testing
 
-During the development of the project I carries out testing. 
+During the development of the project I carried out testing, I used Google Chrome Developer Tools consistently to check each changes.
+
+I have tested the site on Google Chrome, Safari and Firefox. And on the following mobile devices: Xiaomi, iPhone11 and iPhone6. And on iPad tablet.
+
+I tried to test responsivness on [Am I Responsive](http://ami.responsivedesign.is/#), but Django does not allow it.
 
 #### Functionality Test
 
@@ -218,6 +234,12 @@ During the development of the project I carries out testing.
 
 ### DEPLOYMENT
 
+#### Deployment to Heroku
+
+The following steps were taken in order to deploy this site to Heroku:
+
+1. 
+
 ### Disclaimer
 
 This project was created for educational use only.
@@ -238,3 +260,6 @@ https://www.udemy.com/course/python-django-dev-to-deployment/
 
 W3C errors:
  The value of the for attribute of the label element must be the ID of a non-hidden form control.
+
+
+ farm.html {% else $}
