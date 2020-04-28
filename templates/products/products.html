@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
-
 {% load humanize %}
-
 {% block content %}
 
 <section id="products">
     <div class="container">
         <!-- Messages -->
         {% include 'partials/_messages.html' %}
-        
+
         {% if searchterm %}
         <h4>Search result for <strong>{{ searchterm }}</strong>:</h4>
         {% endif %}

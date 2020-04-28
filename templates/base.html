@@ -5,14 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- OG meta tags added -->
+    <!-- OG meta tags -->
     <meta property="og:title" content="Egg-Sell-NT">
     <meta property="og:description" content="Buy our eggs!">
     <meta property="og:image" content="http://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/canva_brown_egg.jpg">
     <meta property="og:url" content="https://egg-sell-nt.herokuapp.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website" />
-    <!-- Favicon added -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
     <title>Egg Sell NT</title>
     <!-- Bootstrap, Font Awesome -->
@@ -28,13 +28,12 @@
     <!-- NavBar -->
     {% include 'partials/_navbar.html' %}
 
-
     {% block content %} {% endblock %}
 
     <!-- Footer -->
     {% include 'partials/_footer.html' %}
 
-    <!-- Scripts for bootstrap -->
+    <!-- Scripts for Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
