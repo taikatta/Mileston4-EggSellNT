@@ -68,7 +68,7 @@ After a product is added to the cart, the user can view the containt of the cart
 
 * As a user I would like to be able to find information about my previous orders.
 
-* As a user I would like to search based on from which farm the eggs are coming from.
+* As a user I would like to search based on which farm the eggs are coming from.
 
 * As a user I would like to be able to contact Egg - Sell - NT with my questions.
 
