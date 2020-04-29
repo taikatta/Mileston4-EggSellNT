@@ -56,6 +56,7 @@ def login(request):
     Renders the login page
     """
     if request.user.is_authenticated:
+        messages.success(request, 'You are already logged in!')
         return redirect('index')
     if request.method == 'POST':
         username = request.POST['username']
