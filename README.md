@@ -132,8 +132,6 @@ Originally on the home page I wanted to have one background picture and 3 of our
 I wanted to have a nice photo and text when the link is shared on Messenger, so I added OG meta tags to base.html and used Sharing Debugger (Facebook developer tools) to debug. I made a typo in the title, I had to fix it. 
 
 
-#### Features Left to Implement:
-
 [Back to Top](#table-of-contents)
 
 ### Technology Used:
@@ -161,12 +159,12 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 * <a href="https://git-scm.com/">Git</a> Version control
 * <a href="https://github.com">Github</a> Used as a Git repository hosting service
 * <a href="https://www.heroku.com/">Heroku</a> Is a container-based cloud Platform, I used Heroku to deploy this app.
-<a href="https://favicon.io/favicon-converter/">Favicon Generator</a> Used to make the right Favicon for the project, I converted the home page background image to a favicon.
-<a href="https://www.canva.com/photos/">Canva photos</a> Used to find the background images.
-<a href="https://validator.w3.org/">W3C Validator</a> Used to check the validity of my HTML and CSS.
-<a href="http://pep8online.com/">PEP 8 Online Validator</a> Used to check my Python code.
-<a href="https://moqups.com">moquaps</a> Used to create wireframes.
-<a href="https://compressjpeg.com/">compressjpg</a> and <a href="https://compresspng.com/">compresspng</a>Used to compress all my images.
+* <a href="https://favicon.io/favicon-converter/">Favicon Generator</a> Used to make the right Favicon for the project, I converted the home page background image to a favicon.
+* <a href="https://www.canva.com/photos/">Canva photos</a> Used to find the background images.
+* <a href="https://validator.w3.org/">W3C Validator</a> Used to check the validity of my HTML and CSS.
+* <a href="http://pep8online.com/">PEP 8 Online Validator</a> Used to check my Python code.
+* <a href="https://moqups.com">moquaps</a> Used to create wireframes.
+* <a href="https://compressjpeg.com/">compressjpg</a> and <a href="https://compresspng.com/">compresspng</a>Used to compress all my images.
 * facebook for developers: I used the [Sharing Debugger](https://developers.facebook.com/tools/debug/) to see the information that is used when my website content is shared on Facebook, Messenger and other places.
 * <a href="https://travis-ci.org/">Travis CI</a> for continuous integration
 * <a href="https://aws.amazon.com/s3/">AWS S3 Bucket</a> as a cloud storage
@@ -396,3 +394,6 @@ W3C errors:
 
 
  farm.html {% else $}
+
+
+ #### Features Left to Implement:
