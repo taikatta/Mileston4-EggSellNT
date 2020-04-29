@@ -172,6 +172,7 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 * <a href="https://aws.amazon.com/s3/">AWS S3 Bucket</a> as a cloud storage
 * <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html">Boto3 </a>to make use of Amazon S3
 * <a href="https://python-pillow.org/">Pillow</a> for saving image file formats
+* <a href="https://miniwebtool.com/django-secret-key-generator/">miniwebtool</a> for generating new SECRET_KEY
 
 
 #### Databases
