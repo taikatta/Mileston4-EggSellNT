@@ -396,21 +396,3 @@ Special thanks to my mentor, Brian Macharia for his time and clear guidance. Tha
 This project was created for educational use only.
 
 [Back to Top](#table-of-contents)
-
-
-
-
-# Notes: Delete before submission
-
-I attended Python django dev to deployment course by Brad Traversyon on Udemy, I used his solution for message alert.
-https://www.udemy.com/course/python-django-dev-to-deployment/
-
-
-W3C errors:
- The value of the for attribute of the label element must be the ID of a non-hidden form control.
-
-
- farm.html {% else $}
-
-
- #### Features Left to Implement:
