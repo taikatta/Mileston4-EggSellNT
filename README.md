@@ -76,7 +76,9 @@ After a product is added to the cart, the user can view the containt of the cart
 
 #### Admin stories:
 
-* As an admin I would like to be able to login to an administration panel.
+* As an admin I would like to be able to login to an administration panel
+
+* As an admin I don't want a user to be able to checkout an empty cart
 
 [Back to Top](#table-of-contents)
 
