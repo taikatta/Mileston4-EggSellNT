@@ -260,15 +260,15 @@ The following steps were taken in order to deploy this site to Heroku:
 
 11. Also in `settings.py` the following lines are added:
 
-AWS_S3_OBJECT_PARAMETERS = {
-    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-    'CacheControl': 'max-age=94608000'
+AWS_S3_OBJECT_PARAMETERS = {  
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',  
+    'CacheControl': 'max-age=94608000'  
 }
 
-AWS_STORAGE_BUCKET_NAME = 'egg-sell-nt'
-AWS_S3_REGION_NAME = 'eu-west-1'
-AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = 'egg-sell-nt'  
+AWS_S3_REGION_NAME = 'eu-west-1'  
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")  
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")  
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
@@ -276,22 +276,22 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 13. Created `custom_storages.py` at the top level:
 
-from django.conf import settings
+from django.conf import settings  
 from storages.backends.s3boto3 import S3Boto3Storage
 
 
-class StaticStorage(S3Boto3Storage):
-    location = settings.STATICFILES_LOCATION
+class StaticStorage(S3Boto3Storage):  
+&nbsp;&nbsp;&nbsp;location = settings.STATICFILES_LOCATION
 
-class MediaStorage(S3Boto3Storage):
-    location = settings.MEDIAFILES_LOCATION
+class MediaStorage(S3Boto3Storage):  
+&nbsp;&nbsp;&nbsp;location = settings.MEDIAFILES_LOCATION
 
 14. Went to `settings.py` and added:
 
-STATICFILES_LOCATION = 'static'
+STATICFILES_LOCATION = 'static'  
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
-MEDIAFILES_LOCATION = 'media'
+MEDIAFILES_LOCATION = 'media'  
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 15. Returned to terminal window and run `python3 manage.py collectstatic`
