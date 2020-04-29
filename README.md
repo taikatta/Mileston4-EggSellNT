@@ -33,26 +33,26 @@
 
 The purpose of the project is to build a full-stack site based around business logic used to control a centrally-owned dataset.
 
-The site allows users to search eggs, they can search by farm as well, and after login they can purchase the products.
+The site allows users to search eggs by keywords, they can search by farm as well, and after login they can purchase the products.
 
 The project has the following sections:
 
-* Home page
+* Home page  
 Contains a background image, clicking anywhere on the background image opens the shop page. The javascript behind it is from [Stackoverflow](https://stackoverflow.com/questions/40749122/open-new-tab-when-user-click-anywhere-on-the-page-only-once)
 
-* Shop page
+* Shop page  
 Contains all the available products (eggs).
 
-* Farm page
+* Farm page  
 You can view the farms from where the eggs arrive.
 
-* Login / Register page
+* Login / Register page  
 Login page with option to register if someone is not a member yet.
 
-* Profile page
+* Profile page  
 If the user is logged in there is a Profile page, where the user can check their order history.
 
-* Cart
+* Cart  
 After a product is added to the cart, the user can view the containt of the cart here.
 
 [Back to Top](#table-of-contents)
