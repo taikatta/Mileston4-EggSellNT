@@ -9,6 +9,8 @@ def register(request):
     Users can register a new account, after registering user
     is redirected to the home page.
     """
+    if request.user.is_authenticated:
+        return redirect('index')
     if request.method == 'POST':
 
         # Get form values
@@ -53,6 +55,8 @@ def login(request):
     """
     Renders the login page
     """
+    if request.user.is_authenticated:
+        return redirect('index')
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
