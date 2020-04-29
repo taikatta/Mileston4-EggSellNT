@@ -6,32 +6,34 @@
     <div class="container">
         <!-- Messages -->
         {% include 'partials/_messages.html' %}
-        
+
         <div class="text-center">
             <h5>Welcome, {{ user.first_name }}!</h5>
             <p>Your Order History</p>
         </div>
         {% for order in orders reversed %}
-        <p>Date: {{ order.order.date }}</p>
-        <div>
-            <table class="table">
-                <thead>
-                    <tr class="table-secondary">
-                        <th scope="col">Product</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for item in order.items %}
-                    <tr>
-                        <td>{{ item.product.name }}</td>
-                        <td>{{ item.quantity }}</td>
-                        <td>{{ item.product.price }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+        <div class="order-history">
+            <p>Date: {{ order.order.date }}</p>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr class="table-secondary">
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in order.items %}
+                        <tr>
+                            <td>{{ item.product.name }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>{{ item.product.price }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
         {% endfor %}
     </div>
