@@ -74,7 +74,7 @@
             <h5> Cart Total (including VAT): <span aria-hidden="true"><i class="fas fa-euro-sign"></i></span>{{ total }}
             </h5>
         </div>
-        <a href="{% url 'checkout' %}" class="btn btn-success col-12 checkout-btn" role="button"><span
+        <a {% if total == 0 %} aria-disabled="true"  class="btn btn-success col-12 checkout-btn disabled" {% else %} class="btn btn-success col-12 checkout-btn" {% endif %} href="{% url 'checkout' %}" role="button"><span
                 class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
         <div class="mx-auto">
             <h6>Free shipping on all orders.</h6>
