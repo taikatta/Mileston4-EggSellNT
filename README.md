@@ -388,7 +388,7 @@ This project was created for educational use only.
 
 
 
-
+# Notes: Delete before submission
 
 I attended Python django dev to deployment course by Brad Traversyon on Udemy, I used his solution for message alert.
 https://www.udemy.com/course/python-django-dev-to-deployment/
