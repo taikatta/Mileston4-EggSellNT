@@ -234,6 +234,55 @@ I tried to test responsivness on [Am I Responsive](http://ami.responsivedesign.i
 
 ### DEPLOYMENT
 
+#### Running Code Locally
+
+
+1. Follow this link to my [Repository on Github](https://github.com/taikatta/Mileston4-EggSellNT) and open it.
+
+2. Click `Clone or Download`.
+
+3. In the Clone with HTTPs section, click the `copy` icon.
+
+4. In your local IDE open Git Bash.
+
+5. Change the current working directory to where you want the cloned directory to be made.
+
+6. Type `git clone`, and then paste the URL you copied earlier.
+
+7. Press enter and your local clone will be ready.
+
+8. Create and start a new environment:  
+python -m .venv venv  
+source env/bin/activate
+
+9. Install the project dependencies:  
+pip install -r requirements.txt
+
+10. Create a new file, called `env.py` and add your environment variables:
+
+import os  
+os.environ.setdefault("STRIPE_PUBLISHABLE", "secret key here")
+os.environ.setdefault("STRIPE_SECRET", "secret key here")
+os.environ.setdefault("DATABASE_URL", "secret key here")
+os.environ.setdefault("SECRET_KEY", "secret key here")
+os.environ.setdefault("AWS_ACCESS_KEY_ID", "secret key here")
+os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "secret key here")
+
+11. Go to `settings.py` file and add your environment variables.
+
+12. Add `env.py` to .gitignore file
+
+13. Go to terminal and run the following: `python3 manage.py makemigrations`, then `python3 manage.py migrate` to migrate all existing migrations to postgres database.
+
+14. Create a superuser: `python3 manage.py createsuperuser`
+
+15. Run it with the following command:  
+`python manage.py runserver`
+
+16. Open `localhost:8000` on your browser
+
+17.  Add `/admin` to the end of the url address and login with your superuser account and create new products.
+
 #### Deployment to Heroku
 
 The following steps were taken in order to deploy this site to Heroku:
