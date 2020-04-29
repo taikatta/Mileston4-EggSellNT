@@ -203,7 +203,7 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 | 8 |  Logout | Clicking on Logout | ![Shop](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Shop view| ![Logout success](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/logged_out_success.png) Logout success|  Passed |
 | 9 |  Search | Searching for a word that only exists in title | ![Search for pink](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/pink_search.png) Search for pink| ![Search result for pink](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/pink_result.png) Search result for pink|  Passed |
 | 10 |  Search | Searching for a word that only exists in description | ![Search for auracana](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/auracana_search.png) Search for auracana| ![Search result for auracana](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/auracana_result.png) Search result for auracana|  Passed |
-| 11 |  404 page | Visiting a page that does not exist | ![Search for no_where_land](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Search for no_where_land| ![Search result for no_where_land](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/404.png) Search result for no_where_land|  Passed |
+| 11 |  404 page | Visiting a page that does not exist | ![Search for farm 6](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search_farm_6.png) Search for farm 6| ![Search result for farm 6](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/404.png) Search result for farm 6|  Passed |
 
 
 
