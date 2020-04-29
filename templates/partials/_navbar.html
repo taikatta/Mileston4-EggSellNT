@@ -6,7 +6,7 @@
   <div class="d-flex order-lg-1 ml-auto pr-2 pt-2">
     <a href="{% url 'view_cart' %}" class="nav-link"><i class="fas fa-shopping-cart"></i>
       {% if product_count > 0 %}
-      <label class="badge badge-warning">{{ product_count }}</label>
+      <span class="badge badge-warning">{{ product_count }}</span>
       {% endif %}
     </a>
   </div>
