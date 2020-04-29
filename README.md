@@ -181,11 +181,11 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 
 ### Testing
 
-During the development of the project I carried out testing, I used Google Chrome Developer Tools consistently to check each changes.
+* During the development of the project I carried out testing, I used Google Chrome Developer Tools consistently to check each changes.
 
-I have tested the site on Google Chrome, Safari and Firefox. And on the following mobile devices: Xiaomi, iPhone11 and iPhone6. And on iPad tablet.
+* I have tested the site on Google Chrome, Safari and Firefox. And on the following mobile devices: Xiaomi, iPhone11 and iPhone6. And on iPad tablet.
 
-I tried to test responsivness on [Am I Responsive](http://ami.responsivedesign.is/#), but Django does not allow it.
+* I tried to test responsivness on [Am I Responsive](http://ami.responsivedesign.is/#), but Django does not allow it.
 
 #### Functionality Test
 
@@ -199,6 +199,11 @@ I tried to test responsivness on [Am I Responsive](http://ami.responsivedesign.i
 | 6 |  Checkout | Checkout | ![Checkout view](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/checkout.png) Checkout view | ![Paying done](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/checkout_success.png) Paying done |  Passed |
 | 7 |  Farms page | Clicking on Farms in Navbar | ![Homa page](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Home page | ![Farms](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/farms.png) Farm view |  Passed |
 | 8 |  Logout | Clicking on Logout | ![Shop](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Shop view| ![Logout success](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/logged_out_success.png) Logout success|  Passed |
+| 9 |  Search | Searching for a word that only exists in title | ![Search for pink](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/pink_search.png) Search for pink| ![Search result for pink](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/pink_result.png) Search result for pink|  Passed |
+| 10 |  Search | Searching for a word that only exists in description | ![Search for auracana](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/auracana_search.png) Search for auracana| ![Search result for auracana](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/auracana_result.png) Search result for auracana|  Passed |
+
+
+
 
 #### Browser Compatibility test
 
