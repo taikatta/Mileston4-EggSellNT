@@ -21,9 +21,9 @@
 
 7. [Testing](#Testing)
 
-8. [Credits](#Credits)
+8. [DEPLOYMENT](#DEPLOYMENT)
 
-9. [DEPLOYMENT](#DEPLOYMENT)
+9. [Credits](#Credits)
 
 10. [Disclaimer](#Disclaimer)
 
@@ -224,12 +224,6 @@ I tried to test responsivness on [Am I Responsive](http://ami.responsivedesign.i
 
 [Back to Top](#table-of-contents)
 
-### Credits
-
-#### Acknowledgements
-
-[Back to Top](#table-of-contents)
-
 ### DEPLOYMENT
 
 #### Running Code Locally
@@ -373,6 +367,17 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 24. Returned to `Heroku` and hit `Deploy Branch` again.
 
+### Credits
+
+#### Media
+
+I found the background images and the farm images on Canva photos. The images of the eggs were taken by me, using the eggs from our community garden.
+
+#### Acknowledgements
+
+Special thanks to my mentor, Brian Macharia for his time and clear guidance. Thank you for being a good mentor and for guiding me on the right path.
+
+[Back to Top](#table-of-contents)
 
 ### Disclaimer
 
