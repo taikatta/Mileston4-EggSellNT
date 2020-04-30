@@ -28,11 +28,12 @@
                         <tr>
                             <td>{{ item.product.name }}</td>
                             <td>{{ item.quantity }}</td>
-                            <td>{{ item.product.price }}</td>
+                            <td><i class="fas fa-euro-sign"></i>{{ item.product.price }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                 </table>
+                <h5 class="text-right">Total: <i class="fas fa-euro-sign"></i>{{ order.total }}</h5>
             </div>
         </div>
         {% endfor %}
