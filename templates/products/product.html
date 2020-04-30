@@ -38,7 +38,7 @@
                     <div class="card-body">
                         <h3 class="card-title">{{ product.name }}</h3>
                         <p class="card-text">{{ product.description }}</p>
-                        <p>€{{ product.price | intcomma }}</p>
+                        <p><i class="fas fa-euro-sign"></i>{{ product.price | intcomma }}</p>
                         <a href="{% url 'products_by_farm' product.farm.id %}">From: {{ product.farm }}</a>
                         <form method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
