@@ -29,6 +29,8 @@
 
 [Back to Top](#table-of-contents)
 
+This is my final Milestone Project on the Full Stack Web Developer Code Institute course. For Full Stack Frameworks with Django module.
+
 ### Project purpose: 
 
 The purpose of the project is to build a full-stack site based around business logic used to control a centrally-owned dataset.
