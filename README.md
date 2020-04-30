@@ -35,12 +35,12 @@ This is my final Milestone Project on the Full Stack Web Developer Code Institut
 
 The purpose of the project is to build a full-stack site based around business logic used to control a centrally-owned dataset.
 
-The site allows users to search eggs by keywords, they can search by farm as well, and after login they can purchase the products.
+The site allows users to search eggs by keywords, they can search by farm as well, and after registration/login they can purchase the products.
 
 The project has the following sections:
 
 * Home page  
-Contains a background image, clicking anywhere on the background image opens the shop page. The javascript behind it is from [Stackoverflow](https://stackoverflow.com/questions/40749122/open-new-tab-when-user-click-anywhere-on-the-page-only-once)
+Contains a background image, clicking anywhere on the background image opens the shop page. The javascript behind it is from [Stackoverflow](https://stackoverflow.com/questions/40749122/open-new-tab-when-user-click-anywhere-on-the-page-only-once).
 
 * Shop page  
 Contains all the available products (eggs).
@@ -91,7 +91,7 @@ After a product is added to the cart, the user can view the containt of the cart
 
 #### Fonts:
 
-I used Noto Sans, from Google Fonts
+I used Noto Sans, from Google Fonts.
 
 On fonts.google.com in the about section the description of the font is the following: When text is rendered by a computer, sometimes there will be characters in the text that can not be displayed, because no font that supports them is available to the computer. Noto helps to make the web more beautiful across platforms for all languages. Currently, Noto covers over 30 scripts, and will cover all of Unicode in the future. This is the Sans Latin, Greek and Cyrillic family. It has Regular, Bold, Italic and Bold Italic styles and is hinted.
 
@@ -99,9 +99,9 @@ Sans-serif is used as the default backup font in case when Nunito Sans was not p
 
 #### Colors:
 
-* ![#495057](https://placehold.it/15/495057/000000?text=+) #4284A4 - font color
+* ![#495057](https://placehold.it/15/495057/000000?text=+) #495057 - font color
 
-* ![#F2F4F5](https://placehold.it/15/F2F4F5/000000?text=+) #5B8BA3 - card background color
+* ![#F2F4F5](https://placehold.it/15/F2F4F5/000000?text=+) #F2F4F5 - card, media background color
 
 [Back to Top](#table-of-contents)
 
@@ -134,7 +134,7 @@ Sans-serif is used as the default backup font in case when Nunito Sans was not p
 
 #### Open Graph (OG)
 
-I wanted to have a nice photo and text when the link is shared on Messenger, so I added OG meta tags to base.html and used Sharing Debugger (Facebook developer tools) to debug. I made a typo in the title, I had to fix it. 
+I wanted to have a nice photo and text when the link is shared on Messenger, so I added OG meta tags to base.html and used Sharing Debugger (Facebook developer tools) to debug. I made a typo in the title, I had to scrape the URL again.
 
 
 [Back to Top](#table-of-contents)
