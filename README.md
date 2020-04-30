@@ -192,7 +192,7 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 
 * I have tested the site on Google Chrome, Safari and Firefox. And on the following mobile devices: Xiaomi, iPhone11 and iPhone6. And on iPad tablet.
 
-* I tried to test responsivness on [Am I Responsive](http://ami.responsivedesign.is/#), but Django does not allow it.
+* [Am I Responsive](http://ami.responsivedesign.is/#): Responsive design testing wasn’t working because of the `X-Frame-Options: SAMEORIGIN` security settings.
 
 * Originally when the user clicked on `Add` button next to a product without adding a quantity, nothing happened, as it was considered as 0, quantity needed to be added first. I changed this, because I assumed that it was more user friendly to consider quantity = 1, saving extra clicking fro the user.
 
