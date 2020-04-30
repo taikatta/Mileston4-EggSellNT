@@ -46,6 +46,9 @@ Contains all the available products (eggs).
 * Farm page  
 You can view the farms from where the eggs arrive.
 
+* About Us page  
+You can view the employees of Egg-Sell-NT.
+
 * Login / Register page  
 Login page with option to register if someone is not a member yet.
 
@@ -101,8 +104,6 @@ Sans-serif is used as the default backup font in case when Nunito Sans was not p
 [Back to Top](#table-of-contents)
 
 #### Initial Wireframes:
-
-Originally on the home page I wanted to have one background picture and 3 of our latest donated books, but then I discovered Parallax (Materialize). Parallax is an effect where the background image is moved at a different speed than the foreground content while scrolling, so I decided to use Parallax instead.
 
 [Mobile View - Register, Login and Home pages](https://github.com/taikatta/Mileston4-EggSellNT/blob/master/wireframes/initial_design_mobile_register_login_home.png)
 
@@ -173,6 +174,7 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 * <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html">Boto3 </a>to make use of Amazon S3
 * <a href="https://python-pillow.org/">Pillow</a> for saving image file formats
 * <a href="https://miniwebtool.com/django-secret-key-generator/">miniwebtool</a> for generating new SECRET_KEY
+* <a href="https://thispersondoesnotexist.com/">This person does not exist</a> for employee photos
 
 
 #### Databases
@@ -202,13 +204,14 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 | 4 |  Using search bar |  Search for blue  | ![Search for blue](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search.png) Search for blue|![search result](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search_result.png) Search result|Passed |
 | 5 |  Adding eggs to cart | Adding blue egg to cart | ![Adding egg](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/adding_eggs_to+cart.png) Adding eggs | ![Cart](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/cart.png) Checking cart  |  Passed |
 | 6 |  Checkout | Checkout | ![Checkout view](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/checkout.png) Checkout view | ![Paying done](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/checkout_success.png) Paying done |  Passed |
-| 7 |  Farms page | Clicking on Farms in Navbar | ![Homa page](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Home page | ![Farms](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/farms.png) Farm view |  Passed |
-| 8 |  Logout | Clicking on Logout | ![Shop](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Shop view| ![Logout success](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/logged_out_success.png) Logout success|  Passed |
-| 9 |  Search | Searching for a word that only exists in title | ![Search for pink](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/pink_search.png) Search for pink| ![Search result for pink](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/pink_result.png) Search result for pink|  Passed |
-| 10 |  Search | Searching for a word that only exists in description | ![Search for auracana](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/auracana_search.png) Search for auracana| ![Search result for auracana](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/auracana_result.png) Search result for auracana|  Passed |
-| 11 |  404 page | Visiting a page that does not exist | ![Search for farm 6](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search_farm_6.png) Search for farm 6| ![Search result for farm 6](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/404.png) Search result for farm 6|  Passed |
-| 12 |  Going to login URL | going to [login url](https://egg-sell-nt.herokuapp.com/accounts/login) | ![As a logged in user](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) As a logged in user| ![As a not logged in user](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/login.png) As not logged in|  Passed |
-| 13 |  Going to register URL | going to [register url](https://egg-sell-nt.herokuapp.com/accounts/register) | ![As a logged in user](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) As a logged in user| ![As a not logged in user](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/register.png) As not logged in|  Passed |
+| 7 |  About Us page | Clicking on About Us in Navbar | ![Home page](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Home page | ![About Us](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/about.png) About Us view |  Passed |
+| 8 |  Farms page | Clicking on Farms in Navbar | ![Homa page](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) Home page | ![Farms](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/farms.png) Farm view |  Passed |
+| 9 |  Logout | Clicking on Logout | ![Shop](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/shop.png) Shop view| ![Logout success](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/logged_out_success.png) Logout success|  Passed |
+| 10 |  Search | Searching for a word that only exists in title | ![Search for pink](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/pink_search.png) Search for pink| ![Search result for pink](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/pink_result.png) Search result for pink|  Passed |
+| 11 |  Search | Searching for a word that only exists in description | ![Search for auracana](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/auracana_search.png) Search for auracana| ![Search result for auracana](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/auracana_result.png) Search result for auracana|  Passed |
+| 12 |  404 page | Visiting a page that does not exist | ![Search for farm 6](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/search_farm_6.png) Search for farm 6| ![Search result for farm 6](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/404.png) Search result for farm 6|  Passed |
+| 13 |  Going to login URL | going to [login url](https://egg-sell-nt.herokuapp.com/accounts/login) | ![As a logged in user](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) As a logged in user| ![As a not logged in user](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/login.png) As not logged in|  Passed |
+| 14 |  Going to register URL | going to [register url](https://egg-sell-nt.herokuapp.com/accounts/register) | ![As a logged in user](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/home_page.png) As a logged in user| ![As a not logged in user](https://egg-sell-nt.s3-eu-west-1.amazonaws.com/media/photos/test/register.png) As not logged in|  Passed |
 
 
 
