@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} | About us {% endblock %}
+{% block content %}
+
+<section id="about">
+    <div class="container">
+        <div class="row">
+            {% for employee in employees %}
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{ employee.photo.url }}" alt="employees">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">{{ employee.name }}</h3>
+                        <h6 class="card-text text-center">{{ employee.title }}</h6>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

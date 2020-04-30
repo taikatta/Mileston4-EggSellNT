@@ -34,10 +34,13 @@
       <li {% if '/products/farms' == request.path %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
         <a class="nav-link" href="{% url 'farms' %}">Farms</a>
       </li>
+      <li {% if '/about' == request.path %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+      </li>
       {% if user.is_authenticated %}
       <li {% if '/checkout/order_history' == request.path %} class="nav-item active" {% else %} class="nav-item"
         {% endif %}>
-        <a class="nav-link" href="{% url 'user_order' %}"> <span class="text-muted">Welcome, {{ user.first_name }}!
+        <a class="nav-link" href="{% url 'user_order' %}"> <span class="text-muted">Hi, {{ user.first_name }}!
           </span>Profile</a>
       </li>
       <li class="nav-item mr-3">
