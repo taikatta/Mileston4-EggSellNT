@@ -85,15 +85,3 @@ def logout(request):
         auth.logout(request)
         messages.success(request, "You are now logged out!")
     return redirect('index')
-
-
-def profile(request):
-    """
-    Renders profile page, where the user can check their order history
-    """
-    orders = Order.objects.all()
-    items = OrderLineItem.objects.all()
-    context = {'orders': orders,
-               'items': items
-               }
-    return render(request, "pages/profile.html", context)
