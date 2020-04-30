@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'checkout',
     'django.contrib.humanize',
     'storages',
+    'company',
 ]
 
 MIDDLEWARE = [
