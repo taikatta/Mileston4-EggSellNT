@@ -10,8 +10,29 @@
             <div>
                 <input class="btn btn-secondary goback" type="button" value="Go Back!" onclick="history.back()">
             </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                
+            <div class="d-none d-sm-block">
+                <div class="media">
+                    <img src="{{ product.photo_main.url }}" class="align-self-start mr-3 media-image" alt="Egg">
+                    <div class="media-body">
+                        <h5 class="mt-0">{{ product.name }}</h5>
+                        {{ product.description }}
+
+                        <p>€{{ product.price | intcomma }}</p>
+                        <a href="{% url 'products_by_farm' product.farm.id %}">From: {{ product.farm }}</a>
+                        <form method="post" action="{% url 'add_to_cart' product.id %}">
+                            {% csrf_token %}
+                            <div class="input-group product-btn">
+                                <input name="quantity" type="number" min="1" max="999" class="form-control"
+                                    placeholder="Quantity">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">Add</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block d-sm-none">
                 <div class="card">
                     <img class="card-img-top" src="{{ product.photo_main.url }}" alt="Egg">
                     <div class="card-body">
