@@ -22,8 +22,9 @@ def user_order(request):
         order_products = OrderLineItem.objects.filter(order=order)
         total = 0
         for prod in order_products:
-             total += prod.quantity * prod.product.price
-        order_items.append({"order": order, "items": order_products, "total": total})
+            total += prod.quantity * prod.product.price
+        order_items.append(
+            {"order": order, "items": order_products, "total": total})
     return render(request, "pages/profile.html", {"orders": order_items})
 
 
