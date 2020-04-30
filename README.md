@@ -196,6 +196,8 @@ I wanted to have a nice photo and text when the link is shared on Messenger, so 
 
 * Originally when the user clicked on `Add` button next to a product without adding a quantity, nothing happened, as it was considered as 0, quantity needed to be added first. I changed this, because I assumed that it was more user friendly to consider quantity = 1, saving extra clicking for the user.
 
+* The Checkout button is disabled iff there is nothing in the cart.
+
 #### Functionality Test
 
 | Nr | Test          | Action | Before image  | After image  | Test result |
@@ -391,7 +393,7 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 #### Media
 
-I found the background images and the farm images on Canva photos. The images of the eggs were taken by me, using the eggs from our community garden.
+I found the background images and the farm images on Canva photos. All are employees are non existing people, they photos were found on: <a href="https://thispersondoesnotexist.com/">This person does not exist</a>. The images of the eggs were taken by me, using the eggs from our community garden.
 
 #### Acknowledgements
 
