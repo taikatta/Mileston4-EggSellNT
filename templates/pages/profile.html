@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load humanize %}
 {% block title %} | Order history {% endblock %}
 {% block content %}
 
@@ -28,12 +29,12 @@
                         <tr>
                             <td>{{ item.product.name }}</td>
                             <td>{{ item.quantity }}</td>
-                            <td><i class="fas fa-euro-sign"></i>{{ item.product.price }}</td>
+                            <td><i class="fas fa-euro-sign"></i>{{ item.product.price | intcomma }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                 </table>
-                <h5 class="text-right">Total: <i class="fas fa-euro-sign"></i>{{ order.total }}</h5>
+                <h5 class="text-right">Total: <i class="fas fa-euro-sign"></i>{{ order.total | intcomma }}</h5>
             </div>
         </div>
         {% endfor %}
