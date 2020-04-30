@@ -17,7 +17,7 @@
                         <h5 class="mt-0">{{ product.name }}</h5>
                         {{ product.description }}
 
-                        <p>€{{ product.price | intcomma }}</p>
+                        <p><i class="fas fa-euro-sign"></i>{{ product.price | intcomma }}</p>
                         <a href="{% url 'products_by_farm' product.farm.id %}">From: {{ product.farm }}</a>
                         <form method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
