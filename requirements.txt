@@ -1,4 +1,4 @@
-asgiref==3.3.1
+asgiref==3.3.4
 astroid==2.3.3
 autopep8==1.5.2
 boto3==1.12.41
@@ -6,7 +6,7 @@ botocore==1.15.41
 certifi==2020.4.5.1
 chardet==3.0.4
 dj-database-url==0.5.0
-Django==3.1.7
+Django==3.2
 django-forms-bootstrap==3.1.0
 django-storages==1.9.1
 docutils==0.15.2
@@ -32,5 +32,6 @@ six==1.14.0
 sqlparse==0.3.1
 stripe==2.45.0
 typed-ast==1.4.1
+typing-extensions==3.7.4.3
 urllib3==1.25.8
 wrapt==1.11.2
