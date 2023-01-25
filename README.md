@@ -58,7 +58,7 @@ Login page with option to register if someone is not a member yet.
 If the user is logged in there is a Profile page, where the user can check their order history.
 
 * Cart  
-After a product is added to the cart, the user can view the containt of the cart here.
+After a product is added to the cart, the user can view the content of the cart here.
 
 [Back to Top](#table-of-contents)
 ### UX
